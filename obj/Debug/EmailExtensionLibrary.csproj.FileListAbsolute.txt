@@ -3,3 +3,4 @@ E:\core3.0\EmailExtensionLibrary\bin\Debug\EmailExtensionLibrary.pdb
 E:\core3.0\EmailExtensionLibrary\obj\Debug\EmailExtensionLibrary.csproj.CoreCompileInputs.cache
 E:\core3.0\EmailExtensionLibrary\obj\Debug\EmailExtensionLibrary.dll
 E:\core3.0\EmailExtensionLibrary\obj\Debug\EmailExtensionLibrary.pdb
+E:\core3.0\EmailExtensionLibrary\obj\Debug\EmailExtensionLibrary.csprojAssemblyReference.cache
