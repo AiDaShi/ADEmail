@@ -63,7 +63,7 @@ string pathfile = @"E:\core3.0\SMTPEmail\File\";
 email.DownloadFile_AddAttachments("url", FolderPath).Send();
 ```
 
-> Demo4 （这一切都是扩展方法进行实现的，所以你可以将他们连起来）
+> Demo4 （All of this is implemented by extension methods, so you can connect them together）
 
 ```c#
 string pathfile = @"E:\core3.0\SMTPEmail\File\";
