@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmailExtensionLibrary.EmailModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace EmailExtensionLibrary.EmailInterfaces
         bool Send();
 
         // Download File
-        void DownloadFile_AddAttachments(string urlFile);
+        void DownloadFile_AddAttachments(string urlFile,string FolderPath);
 
         // Add Attachments
         void AddAttachments(string FilePath);

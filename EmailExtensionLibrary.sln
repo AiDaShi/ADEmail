@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailExtensionLibrary", "EmailExtensionLibrary.csproj", "{1FA6F96D-B143-42AF-A98F-E0E325713A7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMTPEmail", "..\SMTPEmail\SMTPEmail.csproj", "{6B7EE6B6-5A01-4FEF-B44A-A67938327F6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FA6F96D-B143-42AF-A98F-E0E325713A7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FA6F96D-B143-42AF-A98F-E0E325713A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FA6F96D-B143-42AF-A98F-E0E325713A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FA6F96D-B143-42AF-A98F-E0E325713A7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B7EE6B6-5A01-4FEF-B44A-A67938327F6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B7EE6B6-5A01-4FEF-B44A-A67938327F6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B7EE6B6-5A01-4FEF-B44A-A67938327F6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B7EE6B6-5A01-4FEF-B44A-A67938327F6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19946872-51D3-4A6F-93C4-2AE1580F8BE4}
+	EndGlobalSection
+EndGlobal
