@@ -51,6 +51,10 @@ namespace EmailExtensionLibrary.EmailExtension
         public void ClearNetworkFile()
         {
             string path = _FolderPath;
+            if (_FolderPath!=null)
+            {
+                Directory.Delete(path, true);
+            }
             //if (Directory.Exists(path))
             //{
             //    foreach (string d in Directory.GetFileSystemEntries(path))
@@ -61,7 +65,6 @@ namespace EmailExtensionLibrary.EmailExtension
             //        }
             //    }
             //}
-            Directory.Delete(path, true);
         }
 
         public void Dispose()

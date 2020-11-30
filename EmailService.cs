@@ -18,7 +18,7 @@ namespace System.Net.Mail
         }
         public static Email Body(this Email email, string Body)
         {
-            email._EmailInfomaction.From = Body;
+            email._EmailInfomaction.Body = Body;
             return email;
         }
         public static Email Subject(this Email email, string Subject)

@@ -9,7 +9,7 @@ The usage method is as follows:
 > Add package AiDaSi _ Email through the package management tool
 
 ```bash
-Install-Package AiDaSi_Email -Version 1.0.0
+Install-Package AiDaSi_Email
 ```
 
 > Reference the namespace in the project
@@ -40,6 +40,16 @@ var email = new Email(() => new EmailInfomaction
     OP = EmailExtensionLibrary.EmailOptionEnum.SMTP // select SMTP Send
 });
 
+```
+
+> 添加 From，TO，CC（BCC）
+
+
+```c#
+email.From("your_email")
+    .To(new string[]{ "to_email" })
+    .CC(new string[] { "cc_email" })
+    .BCC(....)
 ```
 
 > Demo1 （Simple text request）
@@ -76,6 +86,8 @@ bool result = new Email(() => new EmailInfomaction
     IsBodyHtml = false,
     OP = EmailExtensionLibrary.EmailOptionEnum.SMTP // select SMTP Send
 })
+.From("your_email")
+.To(new string[]{ "to_email" })
 .Subject("here is Subject")
 .Body("here is body")
 .AddAttachments(filepath)
