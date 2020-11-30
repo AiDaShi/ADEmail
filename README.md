@@ -20,12 +20,6 @@ using EmailExtensionLibrary.EmailModel;
 using System.Net.Mail;
 ```
 
-> Fill in related parameters last
-
-```c#
-using EmailExtensionLibrary.EmailConfig;
-using System.Net.Mail;
-```
 
 > Initialize email object
 
