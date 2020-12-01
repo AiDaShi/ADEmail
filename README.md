@@ -58,7 +58,15 @@ bool SendResult = email.Send().Result;
 
 ```c#
 email.AddAttachments(filepath).Send();
+// After v1.0.2, multi file asynchronous download was introduced
+email.DownloadFile_multiple_attachments(new []{ 
+                "url one",
+                "url two",
+                "url three"
+                    }, pathfile)
 ```
+
+
 
 > Demo3 （Download the file from the network and send it to the attachment）
 

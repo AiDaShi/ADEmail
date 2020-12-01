@@ -16,6 +16,9 @@ namespace EmailExtensionLibrary.EmailInterfaces
         // Download File
         void DownloadFile_AddAttachments(string urlFile,string FolderPath);
 
+        // Download multiple attachments file
+        void DownloadFile_multiple_attachments(string[] urlFiles, string FolderPath);
+
         // Add Attachments
         void AddAttachments(string FilePath);
 

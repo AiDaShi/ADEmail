@@ -71,6 +71,11 @@ namespace System.Net.Mail
             email._IEB.AddAttachments(FilePath);
             return email;
         }
+        public static Email DownloadFile_multiple_attachments(this Email email, string[] urlFiles, string FolderPath)
+        {
+            email._IEB.DownloadFile_multiple_attachments(urlFiles, FolderPath);
+            return email;
+        }
         public static Email Send(this Email email)
         {
             email.Result = email._IEB.Send();

@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace EmailExtensionLibrary.EmailExtension
@@ -26,7 +27,7 @@ namespace EmailExtensionLibrary.EmailExtension
         {
             if (string.IsNullOrEmpty(urlFile))
             {
-                throw new Exception("The URL and Folder can't null ");
+                throw new Exception("The URL and Folder can't null");
             }
             // can not null
             if (!Directory.Exists(FolderPath))
@@ -45,6 +46,7 @@ namespace EmailExtensionLibrary.EmailExtension
             client.DownloadFile(urlFile, fullpath);
             client.Dispose();
             AddAttachments(fullpath);
+            Console.WriteLine(filename+ " has finished downloading and added to the queue for sending attachments");
         }
 
 
@@ -79,6 +81,21 @@ namespace EmailExtensionLibrary.EmailExtension
             {
                 _emailInfomaction.Attachments.Add(FilePath);
             }
+        }
+
+        public void DownloadFile_multiple_attachments(string[] urlFiles, string FolderPath)
+        {
+            List<Task> tasks = new List<Task>();
+            for (int i = 0; i < urlFiles.Length; i++)
+            {
+                var url = urlFiles[i];
+                tasks.Add(Task.Run(() => DownloadFile_AddAttachments(url, FolderPath)));
+            }
+            TaskFactory taskFactory = new TaskFactory();
+            taskFactory.ContinueWhenAll(tasks.ToArray(), t =>
+            {
+                Console.WriteLine($"All mailbox attachments have been added");
+            }).Wait();
         }
     }
 }
